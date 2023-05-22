@@ -4,7 +4,7 @@
   "description": "This is the capstone project for the first module of the Full Stack Web Development Program offered by Microverse.",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "hint ."
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/henokkhm/microverse-module-1-capstone-project/issues"
   },
-  "homepage": "https://github.com/henokkhm/microverse-module-1-capstone-project#readme"
+  "homepage": "https://github.com/henokkhm/microverse-module-1-capstone-project#readme",
+  "devDependencies": {
+    "hint": "^7.1.8"
+  }
 }
