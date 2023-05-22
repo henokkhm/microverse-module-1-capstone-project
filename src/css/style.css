@@ -1,3 +1,9 @@
-body {
-  background-color: rgb(186, 155, 84);
+/* Custom Properties */
+:root {
+  /* Colors */
+  --primary-color-500: #ec5242;
+  --dark-blue-800: #272a31;
+  --gray-500: #d3d3d3;
+  --white: #fff;
+  --black: #000;
 }
