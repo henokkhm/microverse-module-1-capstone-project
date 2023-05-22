@@ -6,4 +6,25 @@
   --gray-500: #d3d3d3;
   --white: #fff;
   --black: #000;
+
+  /* Fonts */
+  --font-lato: 'Lato', sans-serif;
+
+  /* Font Sizes */
+
+  --fs-100: 0.75rem;
+  --fs-200: 0.8125rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.0625rem;
+  --fs-600: 1.125rem;
+  --fs-700: 1.25rem;
+  --fs-800: 2rem;
+  --fs-900: 2.5rem;
+  --fs-950: 3rem;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-lato);
 }
