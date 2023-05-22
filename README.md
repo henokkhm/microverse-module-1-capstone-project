@@ -155,7 +155,7 @@ If you like this project, you can contribute to it. You are also welcome to give
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for teaching and enforcing professional level practices.
+The original user interface design of this project's website was made by (c) [Cindy Shin](https://www.behance.net/adagio07), retrieved from https://www.behance.net/gallery/29845175/CC-Global-Summit-2015, used under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
