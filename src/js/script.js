@@ -3,4 +3,4 @@ import generateAllSpeakersMarkup from './helpers/generate-speakers-markup.js';
 
 const speakersCardsWrapper = document.querySelector('#speakers__cards-wrapper');
 
-speakersCardsWrapper.innerHTML = generateAllSpeakersMarkup(speakersData)
+speakersCardsWrapper.innerHTML = generateAllSpeakersMarkup(speakersData);
