@@ -3,8 +3,10 @@
   /* Colors */
   --primary-color-500: #ec5242;
   --dark-blue-800: #272a31;
+  --gray-400: #f7f7f7;
   --gray-500: #d3d3d3;
   --gray-600: #626060;
+  --gray-700: #393939;
   --gray-800: #3e3e3e;
   --white: #fff;
   --black: #000;
@@ -78,7 +80,6 @@ body {
   justify-content: space-between;
   gap: 2.5rem;
   position: fixed;
-  margin: 0;
   padding: 1rem;
   left: 0;
   top: 0;
@@ -261,3 +262,74 @@ body {
   }
 }
 /* ============================================================ */
+
+/* Hero Section Styles */
+.hero {
+  background-color: var(--gray-400);
+  text-align: center;
+}
+
+.hero__wrapper {
+  padding: 5rem 1.5rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border: red solid 1px;
+}
+
+.hero__page-headline {
+  font-size: var(--fs-900);
+  font-weight: 900;
+  color: var(--primary-color-500);
+  text-transform: uppercase;
+  order: 2;
+  line-height: 1;
+}
+
+.hero__tagline {
+  color: var(--primary-color-500);
+  order: 1;
+}
+
+.hero__intro {
+  order: 3;
+  background-color: var(--white);
+  color: var(--gray-700);
+  line-height: 1.6;
+  padding: 1rem;
+  max-width: 50rem;
+}
+
+.hero__contact-us {
+  order: 4;
+  line-height: 1.6;
+}
+
+.hero__email-addr {
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  cursor: pointer;
+}
+
+/* Hero Section Styles (Desktop) */
+@media (min-width: 48rem) {
+  .hero {
+  }
+
+  .hero__page-headline {
+  }
+
+  .hero__tagline {
+  }
+
+  .hero__intro {
+  }
+
+  .hero__contact-us {
+  }
+
+  .hero__email-addr {
+  }
+}
