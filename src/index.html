@@ -15,7 +15,62 @@
     <title>Microverse Capstone 1</title>
   </head>
   <body>
-    <h1 id="hello">Hello, Microverse!</h1>
-    <script src="js/script.js"></script>
+    <header>
+      <nav class="nav-bar">
+        <!-- Mobile Menu Open/Close Toggle Button -->
+        <img
+          class="nav-bar__mobile-menu-toggle-button"
+          aria-expanded="false"
+          src="assets/icons/hamburger-close.svg"
+          alt="Open hamburger menu button"
+        />
+        <!-- Top bar Navigation -->
+        <div class="top-nav">
+          <ul data-visible="false" class="container top-nav__links-wrapper">
+            <div class="top-nav__social-links">
+              <li>
+                <a href="#" class="top-nav__link">
+                  <img
+                    src="assets/icons/socials/facebook.svg"
+                    alt="Facebook logo"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="top-nav__link">
+                  <img
+                    src="assets/icons/socials/twitter.svg"
+                    alt="Twitter logo"
+                  />
+                </a>
+              </li>
+            </div>
+            <li><a href="#" class="top-nav__link">Languages</a></li>
+            <li><a href="#" class="top-nav__link">My Page</a></li>
+            <li><a href="#" class="top-nav__link">Logout</a></li>
+          </ul>
+        </div>
+        <!-- Main Navigation -->
+        <div data-visible="false" class="main-nav">
+          <div class="container main-nav__wrapper">
+            <a class="main-nav__logo-wrapper" href="/">
+              <img
+                class="main-nav__logo"
+                src="assets/icons/logo-lg-light.svg"
+                alt="African Eduction Summit Logo"
+              />
+            </a>
+            <ul class="main-nav__links-wrapper">
+              <li><a href="/about" class="main-nav__link active">About</a></li>
+              <li><a href="#" class="main-nav__link">Program</a></li>
+              <li><a href="#" class="main-nav__link">Join</a></li>
+              <li><a href="#" class="main-nav__link">Sponsor</a></li>
+              <li><a href="#" class="main-nav__link">News</a></li>
+              <li><button class="primary-btn">AE Campaign</button></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
