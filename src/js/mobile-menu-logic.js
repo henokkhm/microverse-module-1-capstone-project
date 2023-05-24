@@ -38,8 +38,8 @@ mobileNavLink.forEach((link) => {
 
 // Hide mobile navbar and blurred div
 // for desktop on window resize
-window.onresize = () => {
+window.addEventListener('resize', () => {
   if (window.innerWidth >= 768) {
     handleCloseMobileNav();
   }
-};
+});

@@ -496,7 +496,8 @@ body {
 }
 
 .speakers__card:hover {
-  border: 2px solid var(--primary-color-500);
+  border: 1px solid var(--primary-color-500);
+  box-shadow: 1px 10px 23px 0px rgba(0,0,0,0.1);
   transform: scale(1.03);
 }
 
