@@ -32,6 +32,7 @@
   --fs-900: 2.5rem;
   --fs-950: 3rem;
 }
+
 /* ============================================================ */
 
 /* General Styles */
@@ -65,12 +66,15 @@ body {
 }
 
 /* General Styles (Desktop) */
-@media (min-width: 48rem) {
-}
+
+/* @media (min-width: 48rem) {
+} */
+
 /* ============================================================ */
 
 /* Button Styles */
-.primary-btn {
+
+/* .primary-btn {
 }
 
 .primary-btn:disabled {
@@ -80,10 +84,11 @@ body {
 }
 
 .primary-btn:active:enabled {
-}
+} */
 
 /* Button Styles (Desktop) */
-@media (min-width: 48rem) {
+
+/* @media (min-width: 48rem) {
   .primary-btn {
   }
 
@@ -95,7 +100,8 @@ body {
 
   .primary-btn:active:enabled {
   }
-}
+} */
+
 /* ============================================================ */
 
 /* Header Styles */
@@ -125,7 +131,8 @@ body {
   height: 100vh;
   width: 26rem;
   z-index: 20;
-  background: linear-gradient(147deg, #242424 10%, transparent 40%, #201f1f 70%),
+  background:
+    linear-gradient(147deg, #242424 10%, transparent 40%, #201f1f 70%),
     url(../assets/images/mobile-nav-bg.png);
   background-repeat: no-repeat;
   background-position: top;
@@ -218,7 +225,6 @@ body {
 
 .main-nav__logo {
   height: 4rem;
-  /* margin: 0 auto; */
   margin-top: auto;
 }
 
@@ -248,7 +254,8 @@ body {
 }
 
 /* Header Styles (Desktop) */
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
   .nav-bar {
   }
 
@@ -284,12 +291,14 @@ body {
 
   .main-nav__link:hover {
   }
-}
+} */
+
 /* ============================================================ */
 
 /* Hero Section Styles */
 .hero {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       147deg,
       var(--gray-400) 10%,
       transparent 40%,
@@ -354,7 +363,7 @@ body {
     margin-bottom: 2rem;
   }
 
-  .hero__page-headline {
+  /* .hero__page-headline {
   }
 
   .hero__tagline {
@@ -367,8 +376,9 @@ body {
   }
 
   .hero__email-addr {
-  }
+  } */
 }
+
 /* ============================================================ */
 
 /* Main Program Section Styles */
@@ -468,6 +478,7 @@ body {
     text-align: center;
   }
 }
+
 /* ============================================================ */
 
 /* Speakers Section Styles */
@@ -505,7 +516,7 @@ body {
 
 .speakers__card:hover {
   border: 0.0625rem solid var(--primary-color-500);
-  box-shadow: 0.0625rem 0.625rem 1.4375rem 0rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.0625rem 0.625rem 1.4375rem 0 rgba(0, 0, 0, 0.1);
   transform: scale(1.03);
 }
 
@@ -576,8 +587,8 @@ body {
 
 /* Speakers Section Styles (Desktop) */
 @media (min-width: 48rem) {
-  .speakers {
-  }
+  /* .speakers {
+  } */
 
   .speakers__headline {
     margin-top: 2rem;
@@ -597,21 +608,21 @@ body {
     flex-direction: row;
   }
 
-  .speakers__speaker-photo {
-  }
+  /* .speakers__speaker-photo {
+  } */
 
   .speakers__speaker-photo::before {
     background-image: url('../assets/decorative-elements/checkboard-light.svg');
   }
 
-  .speakers_speaker-name {
+  /* .speakers_speaker-name {
   }
 
   .speakers__speaker-title {
   }
 
   .speakers__speaker-intro {
-  }
+  } */
 }
 
 @media (min-width: 56rem) {
@@ -625,6 +636,7 @@ body {
     max-width: 480px;
   }
 }
+
 /* ============================================================ */
 
 /* Partners Section Styles */
@@ -655,11 +667,12 @@ body {
   transform: scale(1.06);
 }
 
-.partners__logo__img {
-}
+/* .partners__logo__img {
+} */
 
 /* Partners Section Styles (Desktop) */
-@media (min-width: 48rem) {
+
+/* @media (min-width: 48rem) {
   .partners {
   }
 
@@ -674,7 +687,7 @@ body {
 
   .partners__logo__img {
   }
-}
+} */
 
 /* ============================================================ */
 
@@ -710,13 +723,13 @@ body {
   font-size: var(--fs-200);
 }
 
-.footer__github-link {
-}
+/* .footer__github-link {
+} */
 
 /* Footer Styles (Desktop) */
 @media (min-width: 48rem) {
-  .footer {
-  }
+  /* .footer {
+  } */
 
   .footer__wrapper {
     flex-direction: row;
@@ -724,7 +737,7 @@ body {
     justify-content: center;
   }
 
-  .footer__logo__wrapper {
+  /* .footer__logo__wrapper {
   }
 
   .footer__logo {
@@ -737,5 +750,5 @@ body {
   }
 
   .footer__github-link {
-  }
+  } */
 }
