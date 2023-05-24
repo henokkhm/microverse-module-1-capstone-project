@@ -1,7 +1,9 @@
 /* Custom Properties */
 :root {
   /* Colors */
+  --primary-color-400: #df5743;
   --primary-color-500: #ec5242;
+  --primary-color-800: #f91002;
   --dark-blue-800: #272a31;
   --gray-400: #f7f7f7;
   --gray-500: #d3d3d3;
@@ -9,6 +11,7 @@
   --gray-700: #393939;
   --gray-800: #3e3e3e;
   --white: #fff;
+  --off-white: #fdfeff;
   --black: #000;
 
   /* Fonts */
@@ -38,6 +41,24 @@ body {
   min-width: 24rem;
   max-width: 90rem;
   margin: 0 auto;
+}
+
+.small-underline {
+  position: relative;
+  width: max-content;
+  margin: 1rem auto;
+  padding: 0.75rem;
+}
+
+.small-underline::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-1rem);
+  border-bottom: 0.125rem solid var(--primary-color-500);
 }
 
 /* General Styles (Desktop) */
@@ -265,10 +286,16 @@ body {
 
 /* Hero Section Styles */
 .hero {
-  background-image: linear-gradient(147deg, var(--gray-400) 10%, transparent 40%, var(--gray-400) 70%), url('../assets/images/hero-bg.png');
+  background-image: linear-gradient(
+      147deg,
+      var(--gray-400) 10%,
+      transparent 40%,
+      var(--gray-400) 70%
+    ),
+    url('../assets/images/hero-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain ;
+  background-size: contain;
   background-color: var(--gray-400);
   text-align: center;
 }
@@ -279,21 +306,22 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  border: red solid 1px;
 }
 
 .hero__page-headline {
   font-size: var(--fs-900);
   font-weight: 900;
-  color: var(--primary-color-500);
+  color: var(--primary-color-800);
   text-transform: uppercase;
   order: 2;
   line-height: 1;
 }
 
 .hero__tagline {
-  color: var(--primary-color-500);
+  color: var(--primary-color-800);
+  font-size: var(--fs-700);
   order: 1;
+  margin-bottom: -1rem;
 }
 
 .hero__intro {
@@ -335,5 +363,150 @@ body {
   }
 
   .hero__email-addr {
+  }
+}
+/* ============================================================ */
+
+/* Main Program Section Styles */
+.main-program {
+  background-color: var(--dark-blue-800);
+  background-image: url('../assets/decorative-elements/cross-pattern-1.svg');
+  background-size: 3.5vw;
+  color: var(--off-white);
+  padding: 4rem 1rem;
+}
+
+.main-program__headline {
+  font-size: var(--fs-700);
+  text-align: center;
+}
+
+.main-program__cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.main-program__card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  background: #3c3f4665;
+  min-width: 16rem;
+  max-width: 28rem;
+}
+
+.main-program__card:hover {
+  border: 2px solid var(--white);
+}
+
+.main-program__card__icon {
+  height: 3rem;
+}
+
+.main_program__card__header {
+  color: var(--primary-color-400);
+  min-width: 5rem;
+  max-width: 5rem;
+}
+
+.main-program__card__description {
+  text-align: left;
+}
+
+/* Main Program Section Styles (Desktop) */
+@media (min-width: 38rem) {
+  .main-program {
+    background-size: 2vw;
+    padding: 5rem 2rem;
+  }
+
+  .main-program__headline {
+    margin-bottom: 3rem;
+  }
+
+  .main-program__cards-wrapper {
+    gap: 1.25rem;
+  }
+
+  .main-program__card {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 200px;
+  }
+
+  .main-program__card__icon {
+  }
+
+  .main_program__card__header {
+  }
+
+  .main-program__card__description {
+    text-align: center;
+  }
+}
+
+/* ============================================================ */
+
+/* Speakers Section Styles */
+.speakers {
+}
+
+.speakers__headline {
+}
+
+.speakers__cards-wrapper {
+}
+
+.speakers__card {
+}
+
+.speakers__speaker-photo {
+}
+
+.speakers__speaker-photo::before {
+}
+
+.speakers_speaker-name {
+}
+
+.speakers__speaker-title {
+}
+
+.speakers__speaker-intro {
+}
+/* Speakers Section Styles (Desktop) */
+@media (min-width: 48rem) {
+  .speakers {
+  }
+
+  .speakers__headline {
+  }
+
+  .speakers__cards-wrapper {
+  }
+
+  .speakers__card {
+  }
+
+  .speakers__speaker-photo {
+  }
+
+  .speakers__speaker-photo::before {
+  }
+
+  .speakers_speaker-name {
+  }
+
+  .speakers__speaker-title {
+  }
+
+  .speakers__speaker-intro {
   }
 }
