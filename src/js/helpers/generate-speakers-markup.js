@@ -8,7 +8,7 @@ const generateSingleSpeakersMarkup = (speakerData) => {
   } = speakerData;
 
   return `
-    <div class="speakers__card">
+    <li class="speakers__card">
       <div class="speakers__speaker-photo">
         <img
           src="${imgSrc}"
@@ -20,7 +20,7 @@ const generateSingleSpeakersMarkup = (speakerData) => {
         <span class="speakers__speaker-title">${title}</span>
         <p class="speakers__speaker-intro">${intro}</p>
       </div>
-    </div>
+    </li>
 `;
 };
 
