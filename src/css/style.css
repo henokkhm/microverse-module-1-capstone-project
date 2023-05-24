@@ -38,9 +38,10 @@ body {
 }
 
 .container {
-  min-width: 384px;
+  min-width: 375px;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
 .small-underline {
@@ -314,7 +315,7 @@ body {
   color: var(--primary-color-800);
   text-transform: uppercase;
   order: 2;
-  line-height: 1rem;
+  line-height: 2.5rem;
 }
 
 .hero__tagline {
@@ -373,7 +374,7 @@ body {
   background-image: url('../assets/decorative-elements/cross-pattern-1.svg');
   background-size: 3.5vw;
   color: var(--off-white);
-  padding: 64px 16px;
+  padding: 64px 0;
 }
 
 .main-program__headline {
@@ -384,34 +385,38 @@ body {
 .main-program__cards-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 8px;
   margin-top: 32px;
 }
 
 .main-program__card {
+  flex-grow: 1;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   text-align: center;
-  padding: 16px;
+  padding: 10px;
   border: 0.125rem solid transparent;
   transition: all 300ms ease-in-out;
   background: #3c3f4665;
+  width: 95%;
   min-width: 16rem;
   max-width: 28rem;
 }
 
 .main-program__card:hover {
   border: 0.125rem solid var(--white);
+  transform: scale(1.03);
 }
 
 .main-program__card__icon {
-  height: 48px;
+  width: 48px;
 }
 
 .main_program__card__header {
   color: var(--primary-color-400);
+  text-align: left;
   min-width: 5rem;
   max-width: 5rem;
 }
@@ -421,7 +426,7 @@ body {
 }
 
 /* Main Program Section Styles (Desktop) */
-@media (min-width: 608px) {
+@media (min-width: 640px) {
   .main-program {
     background-size: 2vw;
     padding: 80px 32px;
@@ -438,13 +443,18 @@ body {
   .main-program__card {
     flex-direction: column;
     gap: 16px;
-    max-width: 12.5rem;
+    width: 100%;
+    max-width: 12rem;
+    padding: 1rem;
   }
 
   .main-program__card__icon {
+    height: 48px;
+    width: auto;
   }
 
   .main_program__card__header {
+    text-align: center;
   }
 
   .main-program__card__description {
@@ -458,12 +468,13 @@ body {
 .speakers {
   background-color: var(--gray-400);
   color: var(--gray-700);
-  padding: 64px 16px;
+  padding: 64px 0;
 }
 
 .speakers__headline {
   font-size: var(--fs-700);
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .speakers__cards-wrapper {
@@ -477,7 +488,16 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  padding: 1rem;
+  border: 2px solid transparent;
   width: 95%;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.speakers__card:hover {
+  border: 2px solid var(--primary-color-500);
+  transform: scale(1.03);
 }
 
 .speakers__speaker-photo {
@@ -527,6 +547,10 @@ body {
 
 /* Speakers Section Styles (Tablet) */
 @media (min-width: 648px) {
+  .speakers__cards-wrapper {
+    gap: 0.5rem;
+  }
+
   .speakers__card {
     max-width: 18rem;
   }
@@ -542,10 +566,11 @@ body {
   }
 
   .speakers__cards-wrapper {
+    gap: 1rem;
   }
 
   .speakers__card {
-    max-width: 22rem;
+    max-width: 21rem;
   }
 
   .speakers__speaker-photo {

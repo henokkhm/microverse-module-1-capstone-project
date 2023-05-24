@@ -18,8 +18,7 @@ const speakersData = [
     title: 'Chair of STEM Education, University of Lagos',
     intro: `
       Professor Suleiman Mbeki will highlight the importance of empowering
-      African youth through STEM education for innovation and economic
-      growth.
+      African youth through STEM education.
     `,
   },
   {
