@@ -21,9 +21,9 @@
 
   /* Font Sizes */
 
-  --fs-100: .75rem;
-  --fs-200: .8125rem;
-  --fs-300: .9375rem;
+  --fs-100: 0.75rem;
+  --fs-200: 0.8125rem;
+  --fs-300: 0.9375rem;
   --fs-400: 1rem;
   --fs-500: 1.0625rem;
   --fs-600: 1.125rem;
@@ -50,7 +50,7 @@ body {
   position: relative;
   width: max-content;
   margin: 1rem auto;
-  padding: .75rem;
+  padding: 0.75rem;
 }
 
 .small-underline::before {
@@ -61,7 +61,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-1rem);
-  border-bottom: .125rem solid var(--primary-color-500);
+  border-bottom: 0.125rem solid var(--primary-color-500);
 }
 
 /* General Styles (Desktop) */
@@ -131,8 +131,8 @@ body {
   background-position: top;
   background-color: var(--gray-800);
   color: var(--white);
-  border-bottom-right-radius: .75rem;
-  border-top-right-radius: .75rem;
+  border-bottom-right-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 
 .nav-bar-wrapper[data-visible='false'] {
@@ -182,7 +182,7 @@ body {
 
 .top-nav__link:hover {
   text-decoration: underline;
-  text-underline-offset: .5rem;
+  text-underline-offset: 0.5rem;
 }
 
 .top-nav__social-links {
@@ -244,7 +244,7 @@ body {
 
 .main-nav__link:hover {
   text-decoration: underline;
-  text-underline-offset: .5rem;
+  text-underline-offset: 0.5rem;
 }
 
 /* Header Styles (Desktop) */
@@ -344,13 +344,14 @@ body {
 .hero__email-addr {
   font-weight: 900;
   text-decoration: underline;
-  text-underline-offset: .25rem;
+  text-underline-offset: 0.25rem;
   cursor: pointer;
 }
 
 /* Hero Section Styles (Desktop) */
 @media (min-width: 768px) {
   .hero {
+    margin-bottom: 2rem;
   }
 
   .hero__page-headline {
@@ -387,9 +388,11 @@ body {
 .main-program__cards-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: .5rem;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
   margin-top: 2rem;
+  padding: 0;
 }
 
 .main-program__card {
@@ -398,7 +401,7 @@ body {
   gap: 16px;
   align-items: center;
   text-align: center;
-  padding: .625rem;
+  padding: 0.625rem;
   border: 2px solid transparent;
   transition: all 300ms ease-in-out;
   background: #3c3f4665;
@@ -431,11 +434,13 @@ body {
 @media (min-width: 40rem) {
   .main-program {
     background-size: 2vw;
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
   }
 
   .main-program__headline {
     margin-bottom: 3rem;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .main-program__cards-wrapper {
@@ -483,6 +488,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .speakers__card {
@@ -490,15 +497,15 @@ body {
   align-items: flex-start;
   gap: 16px;
   padding: 16px;
-  border: .125rem solid transparent;
+  border: 0.125rem solid transparent;
   width: 95%;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 
 .speakers__card:hover {
-  border: .0625rem solid var(--primary-color-500);
-  box-shadow: .0625rem .625rem 1.4375rem 0rem rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid var(--primary-color-500);
+  box-shadow: 0.0625rem 0.625rem 1.4375rem 0rem rgba(0, 0, 0, 0.1);
   transform: scale(1.03);
 }
 
@@ -554,7 +561,16 @@ body {
   }
 
   .speakers__card {
-    max-width: 288px;
+    max-width: 600px;
+  }
+
+  .speakers__card:nth-child(odd) {
+    align-self: flex-end;
+  }
+
+  .speakers__card:nth-child(even) {
+    align-self: flex-start;
+    flex-direction: row-reverse;
   }
 }
 
@@ -564,14 +580,21 @@ body {
   }
 
   .speakers__headline {
+    margin-top: 2rem;
   }
 
   .speakers__cards-wrapper {
+    flex-direction: row;
     gap: 16px;
+    margin-bottom: 2rem;
   }
 
   .speakers__card {
-    max-width: 336px;
+    max-width: 360px;
+  }
+
+  .speakers__card:nth-child(even) {
+    flex-direction: row;
   }
 
   .speakers__speaker-photo {
@@ -590,16 +613,29 @@ body {
   .speakers__speaker-intro {
   }
 }
+
+@media (min-width: 56rem) {
+  .speakers__card {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 62rem) {
+  .speakers__card {
+    max-width: 480px;
+  }
+}
 /* ============================================================ */
 
 /* Partners Section Styles */
 .partners {
   background-color: var(--gray-750);
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .partners__headline {
   color: var(--off-white);
+  margin-bottom: 2rem;
 }
 
 .partners__cards-wrapper {
@@ -650,13 +686,12 @@ body {
 }
 
 .footer__wrapper {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
 }
-
 
 .footer__logo {
   height: 80px;
@@ -665,14 +700,14 @@ gap: 40px;
 }
 
 .footer__copyright {
-font-weight: 600;
+  font-weight: 600;
   max-width: 35rem;
 }
 
 .footer__disclaimer {
   max-width: 35rem;
   margin-top: 16px;
-  font-size: var(--fs-200)
+  font-size: var(--fs-200);
 }
 
 .footer__github-link {
