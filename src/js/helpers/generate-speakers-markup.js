@@ -9,14 +9,17 @@ const generateSingleSpeakersMarkup = (speakerData) => {
 
   return `
     <div class="speakers__card">
-      <img
-        class="speakers__speaker-photo"
-        src="${imgSrc}"
-        alt="${imgAlt}"
-      />
-      <h3 class="speakers_speaker-name">${name}</h3>
-      <span class="speakers__speaker-title">${title}</span>
-      <p class="speakers__speaker-intro">${intro}</p>
+      <div class="speakers__speaker-photo">
+        <img
+          src="${imgSrc}"
+          alt="${imgAlt}"
+        />
+      </div>
+      <div class="speakers__card__details">
+        <h3 class="speakers_speaker-name">${name}</h3>
+        <span class="speakers__speaker-title">${title}</span>
+        <p class="speakers__speaker-intro">${intro}</p>
+      </div>
     </div>
 `;
 };
