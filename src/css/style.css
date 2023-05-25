@@ -107,8 +107,25 @@ body {
 }
 
 .primary-btn:active:enabled {
-  background-color: var(--primary-color-500);
-  border: 0.25rem solid var(--white);
+    transform: scale(1.03);
+}
+
+/* Join button */
+.join-btn {
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: block;
+  color: var(--off-white);
+  background: var(--primary-color-400);
+}
+
+.join-btn:disabled {
+  background: var(--gray-400);
+}
+
+.join-btn:hover:enabled {
+  background-color: var(--off-white);
+  color: var(--primary-color-400);
 }
 
 /* Button Styles (Desktop) */
