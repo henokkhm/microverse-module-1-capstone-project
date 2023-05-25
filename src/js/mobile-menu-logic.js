@@ -35,11 +35,3 @@ moblieMenuToggle.addEventListener('click', () => {
 mobileNavLink.forEach((link) => {
   link.addEventListener('click', handleCloseMobileNav);
 });
-
-// Hide mobile navbar and blurred div
-// for desktop on window resize
-window.addEventListener('resize', () => {
-  if (window.innerWidth >= 768) {
-    handleCloseMobileNav();
-  }
-});
