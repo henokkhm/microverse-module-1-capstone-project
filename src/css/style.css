@@ -65,6 +65,14 @@ body {
   border-bottom: 0.125rem solid var(--primary-color-500);
 }
 
+.divider {
+  width: 1.5rem;
+  height: 1px;
+  border-bottom: 2px solid var(--gray-500);
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
 /* General Styles (Desktop) */
 
 /* @media (min-width: 48rem) {

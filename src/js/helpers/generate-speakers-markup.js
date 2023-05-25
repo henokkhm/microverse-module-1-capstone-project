@@ -18,6 +18,7 @@ const generateSingleSpeakersMarkup = (speakerData) => {
       <div class="speakers__card__details">
         <h3 class="speakers_speaker-name">${name}</h3>
         <span class="speakers__speaker-title">${title}</span>
+        <span class="divider"></span>
         <p class="speakers__speaker-intro">${intro}</p>
       </div>
     </li>
