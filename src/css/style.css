@@ -30,7 +30,7 @@
   --fs-700: 1.25rem;
   --fs-800: 2rem;
   --fs-900: 2.5rem;
-  --fs-950: 3rem;
+  --fs-950: 4.5rem;
 }
 
 /* ============================================================ */
@@ -322,11 +322,16 @@ body {
 
 .hero__page-headline {
   font-size: var(--fs-900);
+  line-height: 3rem;
   font-weight: 900;
-  color: var(--primary-color-800);
+  color: transparent;
   text-transform: uppercase;
   order: 2;
-  line-height: 40px;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-image: url('../assets/images/orangebg.jpg');
+  background-size: cover;
+  max-width: 50rem;
 }
 
 .hero__tagline {
@@ -363,10 +368,12 @@ body {
     margin-bottom: 2rem;
   }
 
-  /* .hero__page-headline {
+  .hero__page-headline {
+    font-size: var(--fs-950);
+    line-height: 4rem;
   }
 
-  .hero__tagline {
+  /* .hero__tagline {
   }
 
   .hero__intro {
