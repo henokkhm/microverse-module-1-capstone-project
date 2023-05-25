@@ -82,17 +82,34 @@ body {
 
 /* Button Styles */
 
-/* .primary-btn {
+.primary-btn {
+  color: var(--primary-color-400);
+  background-color: var(--off-white);
+  max-width: max-content;
+  padding: 0.75rem 1.25rem;
+  font-size: var(--fs-700);
+  font-weight: 600;
+  border: 0.25rem solid var(--primary-color-400);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 
 .primary-btn:disabled {
+  color: var(--gray-500);
+  border: 0.25rem solid var(--gray-500);
+  cursor: not-allowed;
 }
 
 .primary-btn:hover:enabled {
+  background-color: var(--primary-color-400);
+  color: var(--white);
+  border: 0.25rem solid var(--white);
 }
 
 .primary-btn:active:enabled {
-} */
+  background-color: var(--primary-color-500);
+  border: 0.25rem solid var(--white);
+}
 
 /* Button Styles (Desktop) */
 
@@ -244,6 +261,11 @@ body {
   flex-grow: 1;
   margin: 0;
   padding: 0;
+}
+
+.main-nav__links-wrapper  button {
+  display: inline-block;
+  margin-top: 1.75rem;
 }
 
 .main-nav__link {
