@@ -82,6 +82,7 @@ body {
 
 /* Button Styles */
 
+/* Primary button */
 .primary-btn {
   color: var(--primary-color-400);
   background-color: var(--off-white);
@@ -108,6 +109,36 @@ body {
 
 .primary-btn:active:enabled {
     transform: scale(1.03);
+}
+
+/* Secondary button */
+.secondary-btn {
+  text-transform: uppercase;
+  color: var(--gray-7s00);
+  background-color: var(--off-white);
+  max-width: max-content;
+  padding: 0.5rem 8rem;
+  font-size: var(--fs-500);
+  border: 0.1rem solid var(--gray-500);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondary-btn:disabled {
+  color: var(--gray-500);
+  border: 0.25rem solid var(--gray-500);
+  cursor: not-allowed;
+}
+
+.secondary-btn:hover:enabled {
+  background-color: var(--gray-500);
+}
+
+.secondary-btn:active:enabled {
+    transform: translateY(1rem);
 }
 
 /* Join button */
