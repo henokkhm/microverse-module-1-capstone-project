@@ -15,7 +15,9 @@ const seeFewerSpeakersButton = `
 `;
 
 const generateSingleSpeakersMarkup = (speakerData) => {
-  const { imgSrc, imgAlt, name, title, intro } = speakerData;
+  const {
+    imgSrc, imgAlt, name, title, intro,
+  } = speakerData;
 
   return `
     <li class="speakers__card">

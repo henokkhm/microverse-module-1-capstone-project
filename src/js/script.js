@@ -1,13 +1,15 @@
 import generateAllSpeakersMarkup from './helpers/generate-speakers-markup.js';
 
 const speakersTarget = document.querySelector('#speakers__content');
+const navbarWrapper = document.querySelector('#nav-bar-wrapper');
+const mainNavLogo = document.querySelector('#main-nav__logo');
 
 const mountSpeakersList = () => {
   const isMobile = window.innerWidth < 768;
 
   if (isMobile) {
-    // When the speakers are mounted for the first time to a mobile 
-    // screen, the list should be collapsed by default. 
+    // When the speakers are mounted for the first time to a mobile
+    // screen, the list should be collapsed by default.
     // To expand the list, the user must click on the "MORE" button.
     speakersTarget.setAttribute('data-expanded', false);
     speakersTarget.innerHTML = generateAllSpeakersMarkup(false);
@@ -29,5 +31,19 @@ speakersTarget.addEventListener('click', (e) => {
   }
 });
 
+// Show navbar for desktop screens
+const handleNavbarResize = () => {
+  const isDesktop = window.innerWidth >= 768;
+  if (isDesktop) {
+    navbarWrapper.setAttribute('data-visible', true);
+    mainNavLogo.setAttribute('src', 'assets/icons/logo-lg.svg');
+  } else {
+    navbarWrapper.setAttribute('data-visible', false);
+    mainNavLogo.setAttribute('src', 'assets/icons/logo-lg-light.svg');
+  }
+};
+
 window.addEventListener('resize', mountSpeakersList);
+window.addEventListener('resize', handleNavbarResize);
 window.addEventListener('load', mountSpeakersList);
+window.addEventListener('load', handleNavbarResize);
