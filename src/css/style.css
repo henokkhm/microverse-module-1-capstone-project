@@ -206,8 +206,7 @@ body {
   height: 100vh;
   width: 26rem;
   z-index: 20;
-  background:
-    linear-gradient(147deg, #242424 10%, transparent 40%, #201f1f 70%),
+  background: linear-gradient(147deg, #242424 10%, transparent 40%, #201f1f 70%),
     url(../assets/images/mobile-nav-bg.png);
   background-repeat: no-repeat;
   background-position: top;
@@ -436,8 +435,7 @@ body {
 
 /* Hero Section Styles */
 .hero {
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       147deg,
       var(--gray-400) 10%,
       transparent 40%,
@@ -489,6 +487,27 @@ body {
   max-width: 50rem;
 }
 
+.hero__summit-info {
+  /* display: flex;
+  flex-direction: column;
+  gap: 0.5rem; */
+  width: 100%;
+  max-width: 800px;
+  order: 4;
+  text-align: left;
+}
+
+.hero__summit-info__dates {
+  color: --gray-750;
+  font-size: var(--fs-600);
+  font-weight: 600;
+}
+
+.hero__summit-info__location {
+  color: --gray-600;
+  font-size: var(--fs-500);
+}
+
 .hero__contact-us {
   order: 4;
   line-height: 25.6px;
@@ -510,6 +529,14 @@ body {
   .hero__page-headline {
     font-size: var(--fs-950);
     line-height: 4rem;
+  }
+
+  .hero__summit-info__dates {
+    font-size: var(--fs-800);
+  }
+
+  .hero__summit-info__location {
+    font-size: var(--fs-600);
   }
 
   /* .hero__tagline {
