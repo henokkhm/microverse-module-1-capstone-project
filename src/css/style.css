@@ -837,6 +837,7 @@ body {
 }
 
 .footer__github-link:hover {
+  color: var(--primary-color-800);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
