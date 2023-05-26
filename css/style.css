@@ -783,6 +783,7 @@ body {
 .partners__headline {
   color: var(--off-white);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .partners__cards-wrapper {
