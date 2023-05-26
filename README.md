@@ -28,7 +28,7 @@
 
 # Personal Portfolio Site <a name="about-project"></a>
 
-This project is my personal portfolio website. This is the second project in Module-1 of the Full Stack Developer program at Microverse.
+This project is the first capstone project of the Full Stack Developer program offered by Microverse. It is about a fictional "African Education Summit" that was created  for the purpose of this web development project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,6 +39,7 @@ This project is my personal portfolio website. This is the second project in Mod
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
 
@@ -48,7 +49,8 @@ This project is my personal portfolio website. This is the second project in Mod
 
 ### Key Features <a name="key-features"></a>
 
-- **Responsive Home Page** to showcase my previous projects and information about me.
+- **Responsive Home Page** to showcase the event speakers and the program.
+- **Responsive About Page** that gives information about the event.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -56,7 +58,7 @@ This project is my personal portfolio website. This is the second project in Mod
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-👉 [Link to Live Demo](https://henokkhm.github.io/portfolio-site/)
+👉 [Link to Live Demo](https://henokkhm.github.io/microverse-module-1-capstone-project/)
 
 This site is hosted on [GitHub pages](https://pages.github.com/).
 
@@ -70,10 +72,11 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+- In order to run this project you only need a web browser.
 
-- <a href="https://nodejs.org/en/download">Node.js</a>
-- <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">npm</a>
+- In order to run the linters, you need to have:
+  - <a href="https://nodejs.org/en/download">Node.js</a>
+  - <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">npm</a>
 
 ### Setup
 
@@ -81,15 +84,15 @@ Clone this repository to your desired folder:
 
 ```sh
   cd desired-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/henokkhm/microverse-module-1-capstone-project.git
 ```
 
 ### Install
 
-Install this project with:
+Install the linters with:
 
 ```sh
-  cd portfolio-site
+  cd microverse-module-1-capstone-project
   npm install
 ```
 
@@ -97,7 +100,9 @@ Install this project with:
 
 To run the project, open the HTML file in your browser.
 
-To run the linters, run `npx hint .` and `npx stylelint "**/*.{css,scss}"` from the root directory of the project.
+To run the linters, run `npx hint .`, `npx stylelint "**/*.{css,scss}"` and `npx eslint .` from the root directory of the project. Alternatively, you can run all three commands using the following **npm script**
+
+```npm run lint```
 
 ### Run tests
 
@@ -105,7 +110,7 @@ There are currently no tests in this project.
 
 ### Deployment
 
-This project is not currently deployed.
+To deploy a new version of this project, simply merge code to the **main** branch
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,10 +131,7 @@ This project is not currently deployed.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add more content and styling**
-- [ ] **Add a modal to showcase each project**
-- [ ] **Add "Contact Me" form**
-- [ ] **Add an "About Me" section**
-- [ ] **Add a link to download resume in PDF format**
+- [ ] **Add animations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
