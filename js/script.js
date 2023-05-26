@@ -5,6 +5,9 @@ const navbarWrapper = document.querySelector('#nav-bar-wrapper');
 const mainNavLogo = document.querySelector('#main-nav__logo');
 
 const mountSpeakersList = () => {
+  // Prevent this function from running on the About page
+  if (!speakersTarget) { return; }
+
   const isMobile = window.innerWidth < 768;
 
   if (isMobile) {
@@ -18,18 +21,18 @@ const mountSpeakersList = () => {
     speakersTarget.setAttribute('data-expanded', true);
     speakersTarget.innerHTML = generateAllSpeakersMarkup(true);
   }
-};
 
-// Add event listener to the "MORE"/"LESS" buttons
-speakersTarget.addEventListener('click', (e) => {
-  if (e.target.id === 'see-more-speakers-btn') {
-    speakersTarget.setAttribute('data-expanded', true);
-    speakersTarget.innerHTML = generateAllSpeakersMarkup(true);
-  } else if (e.target.id === 'see-fewer-speakers-btn') {
-    speakersTarget.setAttribute('data-expanded', false);
-    speakersTarget.innerHTML = generateAllSpeakersMarkup(false);
-  }
-});
+  // Add event listener to the "MORE"/"LESS" buttons
+  speakersTarget.addEventListener('click', (e) => {
+    if (e.target.id === 'see-more-speakers-btn') {
+      speakersTarget.setAttribute('data-expanded', true);
+      speakersTarget.innerHTML = generateAllSpeakersMarkup(true);
+    } else if (e.target.id === 'see-fewer-speakers-btn') {
+      speakersTarget.setAttribute('data-expanded', false);
+      speakersTarget.innerHTML = generateAllSpeakersMarkup(false);
+    }
+  });
+};
 
 // Show navbar for desktop screens
 const handleNavbarResize = () => {
