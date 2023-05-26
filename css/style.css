@@ -408,7 +408,7 @@ body {
 /* ============================================================ */
 
 /* Hero Section Styles */
-.hero  {
+.hero {
   background-image:
     linear-gradient(
       147deg,
@@ -424,7 +424,8 @@ body {
   text-align: center;
 }
 
-.hero__wrapper, .about__wrapper  {
+.hero__wrapper,
+.about__wrapper {
   padding: 10rem 1.5rem 4rem;
   display: flex;
   align-items: center;
@@ -432,7 +433,8 @@ body {
   gap: 2rem;
 }
 
-.hero__page-headline, .about__page-headline  {
+.hero__page-headline,
+.about__page-headline {
   font-size: var(--fs-900);
   line-height: 3rem;
   font-weight: 900;
@@ -446,14 +448,15 @@ body {
   max-width: 50rem;
 }
 
-.hero__tagline  {
+.hero__tagline {
   color: var(--primary-color-800);
   font-size: var(--fs-700);
   order: 1;
   margin-bottom: -1rem;
 }
 
-.hero__intro, .about__intro  {
+.hero__intro,
+.about__intro {
   order: 3;
   background-color: var(--white);
   color: var(--gray-700);
@@ -485,7 +488,8 @@ body {
   line-height: 25.6px;
 }
 
-.hero__email-addr, .about__email-addr  {
+.hero__email-addr,
+.about__email-addr {
   font-weight: 900;
   text-decoration: underline;
   text-underline-offset: 0.25rem;
@@ -506,12 +510,13 @@ body {
   .hero__summit-info__dates {
     font-size: var(--fs-800);
   }
-  
-  .hero__intro, .about__intro  {
+
+  .hero__intro,
+  .about__intro {
     padding: 2rem;
     font-size: var(--fs-600);
   }
-  
+
   .hero__contact-us {
     font-size: var(--fs-600);
   }
@@ -857,8 +862,7 @@ body {
   }
 }
 
-
-/* About page styles */ 
+/* About page styles */
 .about {
   text-align: center;
 }
@@ -875,8 +879,7 @@ body {
   padding-bottom: 2rem;
 }
 
-
-/* About page logo competition section styles */ 
+/* About page logo competition section styles */
 .logo-competition {
   background: var(--white);
   padding: 5rem 1rem;
@@ -892,7 +895,7 @@ body {
 }
 
 .logo-competition__paragraph + p {
-    display: none;
+  display: none;
 }
 
 .logo-competition__logo-wrapper {
@@ -905,17 +908,16 @@ body {
   border: 1px solid var(--gray-500);
 }
 
-.logo-competition__logo{
+.logo-competition__logo {
   width: 20rem;
 }
 
-/* About page logo competition section styles (Desktop)*/ 
-@media (min-width: 768px){
+/* About page logo competition section styles (Desktop) */
+@media (min-width: 768px) {
   .logo-competition__paragraph + p {
     display: block;
   }
 }
-
 
 /* Past summits section styles */
 
@@ -966,7 +968,8 @@ body {
   transform: scale(1.05);
 }
 
-.past-summits__card__header, .past-summits__card__description {
+.past-summits__card__header,
+.past-summits__card__description {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -986,9 +989,8 @@ body {
 }
 
 /* Past summits section styles (Desktop) */
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .past-summits__cards-wrapper {
     flex-direction: row;
   }
 }
-
