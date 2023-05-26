@@ -74,11 +74,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* General Styles (Desktop) */
-
-/* @media (min-width: 48rem) {
-} */
-
 /* ============================================================ */
 
 /* Button Styles */
@@ -161,22 +156,6 @@ body {
   color: var(--primary-color-400);
 }
 
-/* Button Styles (Desktop) */
-
-/* @media (min-width: 48rem) {
-  .primary-btn {
-  }
-
-  .primary-btn:disabled {
-  }
-
-  .primary-btn:hover:enabled {
-  }
-
-  .primary-btn:active:enabled {
-  }
-} */
-
 /* ============================================================ */
 
 /* Header Styles */
@@ -206,7 +185,8 @@ body {
   height: 100vh;
   width: 26rem;
   z-index: 20;
-  background: linear-gradient(147deg, #242424 10%, transparent 40%, #201f1f 70%),
+  background:
+    linear-gradient(147deg, #242424 10%, transparent 40%, #201f1f 70%),
     url(../assets/images/mobile-nav-bg.png);
   background-repeat: no-repeat;
   background-position: top;
@@ -417,12 +397,6 @@ body {
     color: var(--gray-550);
     font-size: var(--fs-600);
   }
-
-  /* .main-nav__link .active {
-  }
-
-  .main-nav__link:hover {
-  } */
 }
 
 @media (min-width: 920px) {
@@ -435,7 +409,8 @@ body {
 
 /* Hero Section Styles */
 .hero {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       147deg,
       var(--gray-400) 10%,
       transparent 40%,
@@ -488,9 +463,6 @@ body {
 }
 
 .hero__summit-info {
-  /* display: flex;
-  flex-direction: column;
-  gap: 0.5rem; */
   width: 100%;
   max-width: 800px;
   order: 4;
@@ -498,13 +470,13 @@ body {
 }
 
 .hero__summit-info__dates {
-  color: --gray-750;
+  color: var(--gray-750);
   font-size: var(--fs-600);
   font-weight: 600;
 }
 
 .hero__summit-info__location {
-  color: --gray-600;
+  color: var(--gray-600);
   font-size: var(--fs-500);
 }
 
@@ -538,18 +510,6 @@ body {
   .hero__summit-info__location {
     font-size: var(--fs-600);
   }
-
-  /* .hero__tagline {
-  }
-
-  .hero__intro {
-  }
-
-  .hero__contact-us {
-  }
-
-  .hero__email-addr {
-  } */
 }
 
 /* ============================================================ */
@@ -772,9 +732,6 @@ body {
 
 /* Speakers Section Styles (Desktop) */
 @media (min-width: 48rem) {
-  /* .speakers {
-  } */
-
   .speakers__headline {
     margin-top: 2rem;
   }
@@ -793,21 +750,9 @@ body {
     flex-direction: row;
   }
 
-  /* .speakers__speaker-photo {
-  } */
-
   .speakers__speaker-photo::before {
     background-image: url('../assets/decorative-elements/checkboard-light.svg');
   }
-
-  /* .speakers_speaker-name {
-  }
-
-  .speakers__speaker-title {
-  }
-
-  .speakers__speaker-intro {
-  } */
 }
 
 @media (min-width: 56rem) {
@@ -852,28 +797,6 @@ body {
   transform: scale(1.06);
 }
 
-/* .partners__logo__img {
-} */
-
-/* Partners Section Styles (Desktop) */
-
-/* @media (min-width: 48rem) {
-  .partners {
-  }
-
-  .partners__headline {
-  }
-
-  .partners__cards-wrapper {
-  }
-
-  .partners__logo {
-  }
-
-  .partners__logo__img {
-  }
-} */
-
 /* ============================================================ */
 
 /* Footer Styles */
@@ -908,32 +831,21 @@ body {
   font-size: var(--fs-200);
 }
 
-/* .footer__github-link {
-} */
+.footer__github-link {
+  color: var(--primary-color-500);
+  text-decoration: none;
+}
+
+.footer__github-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 /* Footer Styles (Desktop) */
 @media (min-width: 48rem) {
-  /* .footer {
-  } */
-
   .footer__wrapper {
     flex-direction: row;
     text-align: left;
     justify-content: center;
   }
-
-  /* .footer__logo__wrapper {
-  }
-
-  .footer__logo {
-  }
-
-  .footer__copyright {
-  }
-
-  .footer__disclaimer {
-  }
-
-  .footer__github-link {
-  } */
 }
