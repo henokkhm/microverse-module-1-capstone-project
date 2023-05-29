@@ -32,7 +32,7 @@
   --fs-750: 1.5rem;
   --fs-800: 2rem;
   --fs-900: 2.5rem;
-  --fs-925: 3.0rem;
+  --fs-925: 3rem;
   --fs-950: 4.5rem;
 }
 
@@ -875,13 +875,12 @@ body {
 .about__wrapper {
   padding-top: 5rem;
   padding-bottom: 5rem;
-
-  background-image: 
-    url("../assets/bg-patterns/10.png"), 
-    url("../assets/bg-patterns/11.png"), 
-    url("../assets/bg-patterns/12.png"), 
-    url("../assets/bg-patterns/12.png"), 
-    url("../assets/bg-patterns/7.png"); 
+  background-image:
+    url("../assets/bg-patterns/10.png"),
+    url("../assets/bg-patterns/11.png"),
+    url("../assets/bg-patterns/12.png"),
+    url("../assets/bg-patterns/12.png"),
+    url("../assets/bg-patterns/7.png");
   background-repeat: no-repeat;
   background-size: 60px, 80px, 80px, 96px, 100px;
   background-position: 18% 3%, 96% 8%, -6% 25%, 100% 40%, 17% 40%;
@@ -976,16 +975,14 @@ body {
 }
 
 .past-summits__card:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 
 .past-summits__card__body {
   position: absolute;
   z-index: 20;
   height: 100%;
   transition: transform 500ms ease-in;
-  
   color: white;
   display: flex;
   flex-direction: column;
@@ -996,16 +993,16 @@ body {
 }
 
 .past-summits__card__img {
-    filter: sepia(100%) saturate(400%) brightness(55%) hue-rotate(-60deg);
+  filter: sepia(100%) saturate(400%) brightness(55%) hue-rotate(-60deg);
   transform: scale(1.05);
-  transition: transform 600ms ease-in-out,  filter 500ms ease-in-out;
+  transition: transform 600ms ease-in-out, filter 500ms ease-in-out;
 }
 
 .past-summits__card__header {
   font-size: var(--fs-800);
 }
 
-.past-summits__card__header, 
+.past-summits__card__header,
 .past-summits__card__description {
   text-align: center;
   transition: all 400ms ease-in;
@@ -1037,10 +1034,10 @@ body {
   filter: none;
 }
 
-.past-summits__card:hover .past-summits__card__header, 
+.past-summits__card:hover .past-summits__card__header,
 .past-summits__card:hover .past-summits__card__description {
-    transform: translateY(-30px);
-    opacity: 0;
+  transform: translateY(-30px);
+  opacity: 0;
 }
 
 .past-summits__card:hover .past-summits__card__btn {
@@ -1048,7 +1045,7 @@ body {
 }
 
 /* Past summits section styles (Desktop) */
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .past-summits__cards-wrapper {
     flex-direction: row;
     gap: 1.5rem;
