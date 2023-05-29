@@ -29,8 +29,10 @@
   --fs-500: 1.0625rem;
   --fs-600: 1.125rem;
   --fs-700: 1.25rem;
+  --fs-750: 1.5rem;
   --fs-800: 2rem;
   --fs-900: 2.5rem;
+  --fs-925: 3.0rem;
   --fs-950: 4.5rem;
 }
 
@@ -435,7 +437,7 @@ body {
 
 .hero__page-headline,
 .about__page-headline {
-  font-size: var(--fs-900);
+  font-size: var(--fs-925);
   line-height: 3rem;
   font-weight: 900;
   color: transparent;
@@ -448,11 +450,13 @@ body {
   max-width: 50rem;
 }
 
-.hero__tagline {
+.hero__tagline,
+.about__tagline {
   color: var(--primary-color-800);
-  font-size: var(--fs-700);
+  font-size: var(--fs-750);
   order: 1;
-  margin-bottom: -1rem;
+  margin-bottom: -3rem;
+  margin-top: 3rem;
 }
 
 .hero__intro,
@@ -865,18 +869,32 @@ body {
 /* About page styles */
 .about {
   text-align: center;
+  background-color: var(--gray-400);
 }
 
 .about__wrapper {
-  background-color: var(--gray-400);
   padding-top: 5rem;
   padding-bottom: 5rem;
+
+  background-image: 
+    url("../assets/bg-patterns/10.png"), 
+    url("../assets/bg-patterns/11.png"), 
+    url("../assets/bg-patterns/12.png"), 
+    url("../assets/bg-patterns/12.png"), 
+    url("../assets/bg-patterns/7.png"); 
+  background-repeat: no-repeat;
+  background-size: 60px, 80px, 80px, 96px, 100px;
+  background-position: 18% 3%, 96% 8%, -6% 25%, 100% 40%, 17% 40%;
 }
 
 .about__page-headline {
   background: none;
   color: var(--primary-color-800);
   padding-bottom: 2rem;
+}
+
+.about__contact-us {
+  order: 3;
 }
 
 /* About page logo competition section styles */
