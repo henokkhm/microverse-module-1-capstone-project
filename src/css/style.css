@@ -29,6 +29,7 @@
   --fs-500: 1.0625rem;
   --fs-600: 1.125rem;
   --fs-700: 1.25rem;
+  --fs-750: 1.5rem;
   --fs-800: 2rem;
   --fs-900: 2.5rem;
   --fs-950: 4.5rem;
@@ -422,12 +423,21 @@ body {
   background-size: contain;
   background-color: var(--gray-400);
   text-align: center;
+   /* background-image:
+    url("../assets/bg-patterns/10.png"),
+    url("../assets/bg-patterns/11.png"),
+    url("../assets/bg-patterns/12.png"),
+    url("../assets/bg-patterns/12.png"),
+    url("../assets/bg-patterns/7.png");
+  background-repeat: no-repeat;
+  background-size: 60px, 80px, 80px, 96px, 100px;
+  background-position: 18% 3%, 96% 8%, -6% 25%, 100% 40%, 17% 40%; */
 }
 
 .hero__wrapper {
   padding: 10rem 1.5rem 4rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 2rem;
 }
@@ -436,6 +446,7 @@ body {
   font-size: var(--fs-900);
   line-height: 3rem;
   font-weight: 900;
+  text-align: left;
   color: transparent;
   text-transform: uppercase;
   order: 2;
@@ -448,7 +459,7 @@ body {
 
 .hero__tagline {
   color: var(--primary-color-800);
-  font-size: var(--fs-700);
+  font-size: var(--fs-750);
   order: 1;
   margin-bottom: -1rem;
 }
@@ -496,11 +507,16 @@ body {
 @media (min-width: 768px) {
   .hero {
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .hero__page-headline {
     font-size: var(--fs-950);
     line-height: 4rem;
+  }
+
+  .hero__tagline {
+    font-size: var(--fs-800);
   }
 
   .hero__summit-info__dates {
