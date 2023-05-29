@@ -212,7 +212,7 @@ body {
 
 /*  Custom scrollbar for mobile menu */
 .nav-bar-wrapper::-webkit-scrollbar {
-  width: .5rem;
+  width: 0.5rem;
   margin-right: 2rem;
   height: 90%;
 }
@@ -948,9 +948,9 @@ body {
 }
 
 .logo-competition__logo-wrapper {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   padding: 2rem;
+  max-width: 36rem;
   display: flex;
   align-items: center;
   justify-content: center;
