@@ -190,6 +190,7 @@ body {
   margin: 0;
   padding: 1rem;
   padding-top: 4rem;
+  padding-bottom: 3rem;
   left: 0;
   top: 0;
   bottom: 0;
@@ -206,6 +207,26 @@ body {
   border-bottom-right-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   transition: all 300ms ease-in;
+  overflow-y: auto;
+}
+
+/*  Custom scrollbar for mobile menu */
+.nav-bar-wrapper::-webkit-scrollbar {
+  width: .5rem;
+  margin-right: 2rem;
+  height: 90%;
+}
+
+.nav-bar-wrapper::-webkit-scrollbar-track {
+  background: var(--gray-400);
+}
+
+.nav-bar-wrapper::-webkit-scrollbar-thumb {
+  background: var(--gray-750);
+}
+
+.nav-bar-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color-400);
 }
 
 .nav-bar-wrapper[data-visible='false'] {
@@ -310,6 +331,7 @@ body {
 .main-nav__links-wrapper button {
   display: inline-block;
   margin-top: 1.75rem;
+  margin-bottom: 3rem;
 }
 
 .main-nav__link {
