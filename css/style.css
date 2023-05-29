@@ -30,6 +30,7 @@
   --fs-600: 1.125rem;
   --fs-700: 1.25rem;
   --fs-750: 1.5rem;
+  --fs-775: 1.75rem;
   --fs-800: 2rem;
   --fs-900: 2.5rem;
   --fs-925: 3rem;
@@ -444,16 +445,14 @@ body {
 /* Hero Section Styles */
 .hero {
   background-image:
-    linear-gradient(
-      147deg,
-      var(--gray-400) 10%,
-      transparent 40%,
-      var(--gray-400) 70%
-    ),
+    url("../assets/bg-patterns/1.png"),
+    url("../assets/bg-patterns/2.png"),
+    url("../assets/bg-patterns/5.png"),
+    url("../assets/bg-patterns/6.png"),
     url('../assets/images/hero-bg.png');
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
+  background-position: 14% 50%, 84% 94%, 4% 98%, 8% 14%, top center;
+  background-size: 30px, 50px, 30px, 30px, contain;
   background-color: var(--gray-400);
   text-align: center;
 }
@@ -462,9 +461,11 @@ body {
 .about__wrapper {
   padding: 10rem 1.5rem 4rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__page-headline,
@@ -472,6 +473,7 @@ body {
   font-size: var(--fs-925);
   line-height: 3rem;
   font-weight: 900;
+  text-align: left;
   color: transparent;
   text-transform: uppercase;
   order: 2;
@@ -487,18 +489,31 @@ body {
   color: var(--primary-color-800);
   font-size: var(--fs-750);
   order: 1;
-  margin-bottom: -3rem;
+  margin-bottom: -1.5rem;
   margin-top: 3rem;
 }
 
 .hero__intro,
 .about__intro {
+  position: relative;
   order: 3;
   background-color: var(--white);
   color: var(--gray-700);
   line-height: 25.6px;
   padding: 1rem;
   max-width: 50rem;
+}
+
+.hero__intro::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 6rem;
+  height: 6rem;
+  right: -3rem;
+  top: -3rem;
+  background-image: url('../assets/bg-patterns/7.png');
+  background-size: contain;
 }
 
 .hero__summit-info {
@@ -509,9 +524,9 @@ body {
 }
 
 .hero__summit-info__dates {
-  color: var(--gray-750);
-  font-size: var(--fs-600);
-  font-weight: 600;
+  color: var(--gray-600);
+  font-size: var(--fs-775);
+  font-weight: 900;
 }
 
 .hero__summit-info__location {
@@ -535,12 +550,28 @@ body {
 /* Hero Section Styles (Desktop) */
 @media (min-width: 768px) {
   .hero {
-    padding-bottom: 2rem;
+    text-align: left;
+    background-image:
+      url("../assets/bg-patterns/1.png"),
+      url("../assets/bg-patterns/2.png"),
+      url("../assets/bg-patterns/5.png"),
+      url("../assets/bg-patterns/6.png"),
+      url('../assets/images/hero-bg.png');
+    background-position: 0% 29%, 84% 90%, 96% 58%, 8% 94%, top center;
+    background-size: 40px, 80px, 30px, 40px, contain;
+  }
+
+  .hero__wrapper {
+    padding-bottom: 6rem;
   }
 
   .hero__page-headline {
     font-size: var(--fs-950);
     line-height: 4rem;
+  }
+
+  .hero__tagline {
+    font-size: var(--fs-800);
   }
 
   .hero__summit-info__dates {
@@ -905,6 +936,7 @@ body {
 }
 
 .about__wrapper {
+  align-items: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-image:
@@ -922,6 +954,12 @@ body {
   background: none;
   color: var(--primary-color-800);
   padding-bottom: 2rem;
+  font-size: var(--fs-925);
+  text-align: center;
+}
+
+.about__tagline {
+  margin-bottom: -3rem;
 }
 
 .about__contact-us {
