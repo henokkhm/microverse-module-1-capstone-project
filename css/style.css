@@ -29,8 +29,10 @@
   --fs-500: 1.0625rem;
   --fs-600: 1.125rem;
   --fs-700: 1.25rem;
+  --fs-750: 1.5rem;
   --fs-800: 2rem;
   --fs-900: 2.5rem;
+  --fs-925: 3rem;
   --fs-950: 4.5rem;
 }
 
@@ -42,7 +44,7 @@ body {
 }
 
 .container {
-  min-width: 23.4375rem;
+  min-width: 23rem;
   max-width: 90rem;
   margin: 0 auto;
   padding: 0 8px;
@@ -71,6 +73,16 @@ body {
   border-bottom: 2px solid var(--gray-500);
   margin-top: 0.25rem;
   margin-bottom: 0.75rem;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(39, 35, 35, 0.522);
+  backdrop-filter: blur(10px);
+  mix-blend-mode: multiply;
 }
 
 /* ============================================================ */
@@ -178,6 +190,7 @@ body {
   margin: 0;
   padding: 1rem;
   padding-top: 4rem;
+  padding-bottom: 3rem;
   left: 0;
   top: 0;
   bottom: 0;
@@ -194,6 +207,26 @@ body {
   border-bottom-right-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   transition: all 300ms ease-in;
+  overflow-y: auto;
+}
+
+/*  Custom scrollbar for mobile menu */
+.nav-bar-wrapper::-webkit-scrollbar {
+  width: 0.5rem;
+  margin-right: 2rem;
+  height: 90%;
+}
+
+.nav-bar-wrapper::-webkit-scrollbar-track {
+  background: var(--gray-400);
+}
+
+.nav-bar-wrapper::-webkit-scrollbar-thumb {
+  background: var(--gray-750);
+}
+
+.nav-bar-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color-400);
 }
 
 .nav-bar-wrapper[data-visible='false'] {
@@ -298,6 +331,7 @@ body {
 .main-nav__links-wrapper button {
   display: inline-block;
   margin-top: 1.75rem;
+  margin-bottom: 3rem;
 }
 
 .main-nav__link {
@@ -435,7 +469,7 @@ body {
 
 .hero__page-headline,
 .about__page-headline {
-  font-size: var(--fs-900);
+  font-size: var(--fs-925);
   line-height: 3rem;
   font-weight: 900;
   color: transparent;
@@ -448,11 +482,13 @@ body {
   max-width: 50rem;
 }
 
-.hero__tagline {
+.hero__tagline,
+.about__tagline {
   color: var(--primary-color-800);
-  font-size: var(--fs-700);
+  font-size: var(--fs-750);
   order: 1;
-  margin-bottom: -1rem;
+  margin-bottom: -3rem;
+  margin-top: 3rem;
 }
 
 .hero__intro,
@@ -865,12 +901,21 @@ body {
 /* About page styles */
 .about {
   text-align: center;
+  background-color: var(--gray-400);
 }
 
 .about__wrapper {
-  background-color: var(--gray-400);
   padding-top: 5rem;
   padding-bottom: 5rem;
+  background-image:
+    url("../assets/bg-patterns/10.png"),
+    url("../assets/bg-patterns/11.png"),
+    url("../assets/bg-patterns/12.png"),
+    url("../assets/bg-patterns/12.png"),
+    url("../assets/bg-patterns/7.png");
+  background-repeat: no-repeat;
+  background-size: 60px, 80px, 80px, 96px, 100px;
+  background-position: 18% 3%, 96% 8%, -6% 25%, 100% 40%, 17% 40%;
 }
 
 .about__page-headline {
@@ -879,10 +924,14 @@ body {
   padding-bottom: 2rem;
 }
 
+.about__contact-us {
+  order: 3;
+}
+
 /* About page logo competition section styles */
 .logo-competition {
   background: var(--white);
-  padding: 5rem 1rem;
+  padding: 5rem 0;
   text-align: center;
 }
 
@@ -899,9 +948,9 @@ body {
 }
 
 .logo-competition__logo-wrapper {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   padding: 2rem;
+  max-width: 36rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -923,7 +972,7 @@ body {
 
 .past-summits {
   background: var(--white);
-  padding: 5rem 1rem;
+  padding: 5rem 0;
   text-align: center;
   border-top: 1px solid var(--gray-400);
 }
@@ -939,58 +988,98 @@ body {
 .past-summits__cards-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   justify-content: center;
-  list-style: none;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
 }
 
 .past-summits__card {
-  height: 26rem;
   position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 28rem;
+  overflow: hidden;
+  transition: transform 500ms ease-in;
 }
 
-.past-summits__card__img-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 430px;
-  height: 286px;
+.past-summits__card:hover {
+  transform: scale(1.02);
+}
+
+.past-summits__card__body {
+  position: absolute;
+  z-index: 20;
+  height: 100%;
+  transition: transform 500ms ease-in;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .past-summits__card__img {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  transition: transform 900ms ease-in-out;
+  filter: sepia(100%) saturate(400%) brightness(55%) hue-rotate(-60deg);
+  transform: scale(1.05);
+  transition: transform 600ms ease-in-out, filter 500ms ease-in-out;
 }
 
-.past-summits__card__img:hover {
-  transform: scale(1.05);
+.past-summits__card__header {
+  font-size: var(--fs-800);
 }
 
 .past-summits__card__header,
 .past-summits__card__description {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  color: var(--white);
+  text-align: center;
+  transition: all 400ms ease-in;
 }
 
-.past-summits__card__header {
-  top: 50px;
-  font-size: var(--fs-800);
+.past-summits__card__btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 500ms ease;
+  border: 2px solid transparent;
+  color: var(--primary-color-400);
+  outline: none;
+  opacity: 0;
 }
 
-.past-summits__card__description {
-  top: 120px;
-  font-size: var(--fs-700);
-  width: 400px;
+.past-summits__card__btn:hover {
+  background-color: var(--primary-color-400);
+  border: 2px solid var(--primary-color-400);
+  transform: scale(1.04);
+  color: white;
+}
+
+.past-summits__card__btn:active {
+  transform: translateY(3px);
+}
+
+.past-summits__card:hover .past-summits__card__img {
+  transform: none;
+  filter: none;
+}
+
+.past-summits__card:hover .past-summits__card__header,
+.past-summits__card:hover .past-summits__card__description {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.past-summits__card:hover .past-summits__card__btn {
+  opacity: 1;
 }
 
 /* Past summits section styles (Desktop) */
 @media (min-width: 768px) {
   .past-summits__cards-wrapper {
     flex-direction: row;
+    gap: 1.5rem;
   }
 }
