@@ -884,9 +884,13 @@ body {
   padding: 4rem 0;
 }
 
+.footer__about-page {
+  background-color: var(--gray-800);
+  color: var(--gray-400);
+}
+
 .footer__wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 40px;
@@ -923,7 +927,6 @@ body {
 /* Footer Styles (Desktop) */
 @media (min-width: 48rem) {
   .footer__wrapper {
-    flex-direction: row;
     text-align: left;
     justify-content: center;
   }
@@ -971,6 +974,8 @@ body {
   background: var(--white);
   padding: 5rem 0;
   text-align: center;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .logo-competition__headline {
