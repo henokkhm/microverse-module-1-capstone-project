@@ -6,7 +6,9 @@ const mainNavLogo = document.querySelector('#main-nav__logo');
 
 const mountSpeakersList = () => {
   // Prevent this function from running on the About page
-  if (!speakersTarget) { return; }
+  if (!speakersTarget) {
+    return;
+  }
 
   const isMobile = window.innerWidth < 768;
 
@@ -24,10 +26,25 @@ const mountSpeakersList = () => {
 
   // Add event listener to the "MORE"/"LESS" buttons
   speakersTarget.addEventListener('click', (e) => {
-    if (e.target.id === 'see-more-speakers-btn') {
+    const seeMoreSpeakersButton = document.querySelector(
+      '#see-more-speakers-btn',
+    );
+    const seeFewerSpeakersButton = document.querySelector(
+      '#see-fewer-speakers-btn',
+    );
+
+    // In the previous implementation, if the text inside the button
+    // was clicked, the event handler would not run. The following fixes that.
+    if (
+      e.target === seeMoreSpeakersButton
+      || (seeMoreSpeakersButton && seeMoreSpeakersButton.contains(e.target))
+    ) {
       speakersTarget.setAttribute('data-expanded', true);
       speakersTarget.innerHTML = generateAllSpeakersMarkup(true);
-    } else if (e.target.id === 'see-fewer-speakers-btn') {
+    } else if (
+      e.target === seeFewerSpeakersButton
+      || (seeFewerSpeakersButton && seeFewerSpeakersButton.contains(e.target))
+    ) {
       speakersTarget.setAttribute('data-expanded', false);
       speakersTarget.innerHTML = generateAllSpeakersMarkup(false);
     }
