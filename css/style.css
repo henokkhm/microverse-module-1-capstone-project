@@ -795,7 +795,7 @@ body {
   }
 
   .speakers__card {
-    max-width: 600px;
+    width: 30rem;
   }
 
   .speakers__card:nth-child(odd) {
@@ -818,10 +818,11 @@ body {
     flex-direction: row;
     gap: 16px;
     margin-bottom: 2rem;
+    max-width: 74rem;
   }
 
   .speakers__card {
-    max-width: 360px;
+    width: 22rem;
   }
 
   .speakers__card:nth-child(even) {
@@ -833,15 +834,15 @@ body {
   }
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 68rem) {
   .speakers__card {
-    max-width: 400px;
+    width: 33rem;
   }
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 76rem) {
   .speakers__card {
-    max-width: 480px;
+    width: 36rem;
   }
 }
 
@@ -880,7 +881,7 @@ body {
   transform: scale(1.06);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .home-page-partners {
     display: block;
   }

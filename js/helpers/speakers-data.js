@@ -67,29 +67,6 @@ const speakersData = [
       leaders.
     `,
   },
-  {
-    id: '07',
-    imgSrc: 'assets/images/speakers/aisha-kamara.png',
-    imgAlt: "Aisha Kamara's photograph",
-    name: 'Aisha Kamara',
-    title: 'Founder, Rural Education Initiative',
-    intro: `
-      Aisha Kamara will explore challenges and opportunities in rural 
-      education in Africa, emphasizing the importance of equitable access.
-    `,
-  },
-  {
-    id: '08',
-    imgSrc: 'assets/images/speakers/kofi-essien.png',
-    imgAlt: "Kofi Essien's photograph",
-    name: 'Kofi Essien',
-    title: 'Dean, Faculty of Education, University of Ghana',
-    intro: `
-      Professor Kofi Essien will focus on the critical role of
-      education in shaping African societies and driving sustainable
-      development.
-    `,
-  },
 ];
 
 export default speakersData;
