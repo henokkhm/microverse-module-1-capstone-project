@@ -510,10 +510,11 @@ body {
   z-index: -1;
   width: 6rem;
   height: 6rem;
-  right: -3rem;
+  right: -1.5rem;
   top: -3rem;
   background-image: url('../assets/bg-patterns/7.png');
   background-size: contain;
+  overflow: hidden;
 }
 
 .hero__summit-info {
@@ -852,6 +853,10 @@ body {
   padding: 3rem 0;
 }
 
+.home-page-partners {
+  display: none;
+}
+
 .partners__headline {
   color: var(--off-white);
   margin-bottom: 2rem;
@@ -875,6 +880,16 @@ body {
   transform: scale(1.06);
 }
 
+@media (min-width: 768px) {
+  .home-page-partners {
+    display: block;
+  }
+
+  .about-page-partners {
+    display: none;
+  }
+}
+
 /* ============================================================ */
 
 /* Footer Styles */
@@ -884,9 +899,8 @@ body {
   padding: 4rem 0;
 }
 
-.footer__about-page {
-  background-color: var(--gray-800);
-  color: var(--gray-400);
+.home-page-footer {
+  display: none;
 }
 
 .footer__wrapper {
@@ -929,6 +943,15 @@ body {
   .footer__wrapper {
     text-align: left;
     justify-content: center;
+  }
+
+  .home-page-footer {
+    display: block;
+  }
+
+  .about-page-footer {
+    background-color: var(--gray-800);
+    color: var(--gray-400);
   }
 }
 
@@ -1006,13 +1029,16 @@ body {
 
 /* About page logo competition section styles (Desktop) */
 @media (min-width: 768px) {
+  .logo-competition {
+    padding: 4rem 0;
+  }
+
   .logo-competition__paragraph + p {
     display: block;
   }
 }
 
 /* Past summits section styles */
-
 .past-summits {
   background: var(--white);
   padding: 5rem 0;
